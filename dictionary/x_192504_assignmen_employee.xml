@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Employee" max_length="40" name="x_192504_assignmen_employee" type="collection">
+        <element label="Dept name" mandatory="true" max_length="32" name="dept_name" reference="x_192504_assignmen_department" reference_qual="numberSTARTSWITHDEP^EQ" reference_qual_condition="numberSTARTSWITHDEP^EQ" type="reference"/>
+        <element default="0" display="true" label="Employee Count" max_length="40" name="employee_count" read_only="true" type="integer"/>
+        <element label="Emp name" mandatory="true" max_length="40" name="emp_name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="dept_name"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_192504_assignmen.addEmp</api_name>
+        <client_callable>false</client_callable>
+        <description>Script Include to add an employee</description>
+        <name>addEmp</name>
+        <script><![CDATA[var addEmp = Class.create();
+addEmp.prototype = {
+    initialize: function() {
+    },
+addEmployee: function(gr) {
+		gr.insert();
+},
+    type: 'addEmp'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-27 03:43:20</sys_created_on>
+        <sys_id>faae56594f205300ead1ff6f9310c7c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>addEmp</sys_name>
+        <sys_package display_value="assignment" source="x_192504_assignmen">fe7949a94f501300ead1ff6f9310c7fe</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="assignment">fe7949a94f501300ead1ff6f9310c7fe</sys_scope>
+        <sys_update_name>sys_script_include_faae56594f205300ead1ff6f9310c7c5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-27 03:43:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_192504_assignmen.empCount</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>empCount</name>
+        <script><![CDATA[var empCount = Class.create();
+empCount.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getCount: function() {
+    	var count = new GlideAggregate('x_192504_assignmen_employee');
+		count.addQuery('dept_name',this.getParameter('sysparm_deptID'));
+		count.addAggregate('COUNT');
+		count.query();
+		var recs = 0;
+		if (count.next())
+		  recs = count.getAggregate('COUNT');
+		return recs;
+	},
+	getList: function(){
+		var count = new GlideAggregate('x_192504_assignmen_employee');
+		count.addQuery('dept_name',this.getParameter('sysparm_deptID'));
+		count.addAggregate('COUNT');
+		count.query();
+		var retString="";
+		if(count.next())
+			retString=retString+count.getValue('emp_name')+",";
+		return retString;
+	},
+
+    type: 'empCount'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-28 01:44:22</sys_created_on>
+        <sys_id>af0ccf254fa85300ead1ff6f9310c737</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>empCount</sys_name>
+        <sys_package display_value="assignment" source="x_192504_assignmen">fe7949a94f501300ead1ff6f9310c7fe</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="assignment">fe7949a94f501300ead1ff6f9310c7fe</sys_scope>
+        <sys_update_name>sys_script_include_af0ccf254fa85300ead1ff6f9310c737</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-28 05:17:13</sys_updated_on>
+    </sys_script_include>
+</record_update>

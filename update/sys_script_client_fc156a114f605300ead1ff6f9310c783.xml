@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Counting number of employees in a particular department</description>
+        <field>dept_name</field>
+        <global>true</global>
+        <messages/>
+        <name>Counting Employees</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	
+	var emplCount = new GlideAjax('empCount');
+	emplCount.addParam('sysparm_name','getCount');
+	emplCount.addParam('sysparm_deptID',g_form.getValue('dept_name'));
+	emplCount.getXML(countField);
+	
+	/*var ga = new GlideAjax('empCount');
+	ga.addParam('sysparm_name','getList');
+	ga.addParam('sysparm_deptID',g_form.getValue('dept_name'));
+	ga.getXML(listField);*/
+	
+	function countField(response){
+		var counted = response.responseXML.documentElement.getAttribute("answer");
+		g_form.clearValue('employee_count');
+		g_form.setValue('employee_count',counted);
+	}
+	/*function listField(response){
+		var listOfEmps = response.responseXML.documentElement.getAttribute("answer");
+		g_form.setValue('employee_list',listOfEmps);
+	}*/
+	
+		
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-27 04:14:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fc156a114f605300ead1ff6f9310c783</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Counting Employees</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="assignment" source="x_192504_assignmen">fe7949a94f501300ead1ff6f9310c7fe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="assignment">fe7949a94f501300ead1ff6f9310c7fe</sys_scope>
+        <sys_update_name>sys_script_client_fc156a114f605300ead1ff6f9310c783</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-28 06:29:59</sys_updated_on>
+        <table>x_192504_assignmen_employee</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Department" max_length="40" name="x_192504_assignmen_department" type="collection">
+        <element label="Dept name" max_length="40" name="dept_name" type="string"/>
+        <element label="Employee List" max_length="4000" name="employee_list" type="glide_list"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+    </element>
+</database>

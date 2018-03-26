@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="dept_name" label="Dept name" language="en" table="x_192504_assignmen_employee">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>dept_name</element>
+            <help/>
+            <hint/>
+            <label>Dept name</label>
+            <language>en</language>
+            <name>x_192504_assignmen_employee</name>
+            <plural>Dept names</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-15 06:09:59</sys_created_on>
+            <sys_id>597d892d4f501300ead1ff6f9310c721</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Dept name</sys_name>
+            <sys_package display_value="assignment" source="x_192504_assignmen">fe7949a94f501300ead1ff6f9310c7fe</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="assignment">fe7949a94f501300ead1ff6f9310c7fe</sys_scope>
+            <sys_update_name>sys_documentation_x_192504_assignmen_employee_dept_name_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-15 06:09:59</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

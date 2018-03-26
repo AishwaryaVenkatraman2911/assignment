@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_192504_assignmen_department</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>uniqueDept</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+	var dup = new GlideRecord('x_192504_assignmen_department');
+	dup.addQuery('dept_name',current.getValue('dept_name'));
+	dup.query();
+	
+	if(dup.next()){
+		gs.addErrorMessage("Department already exists");
+		current.setAbortAction(true);
+	}
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-28 04:02:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>230c27654fe85300ead1ff6f9310c73e</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>uniqueDept</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="assignment" source="x_192504_assignmen">fe7949a94f501300ead1ff6f9310c7fe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="assignment">fe7949a94f501300ead1ff6f9310c7fe</sys_scope>
+        <sys_update_name>sys_script_230c27654fe85300ead1ff6f9310c73e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-28 05:09:52</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=230c27654fe85300ead1ff6f9310c73e"/>
+</record_update>

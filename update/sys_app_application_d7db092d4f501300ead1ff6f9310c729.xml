@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Employee</name>
+        <order>100</order>
+        <roles>x_192504_assignmen.employee_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-15 06:03:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d7db092d4f501300ead1ff6f9310c729</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Employee</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="assignment" source="x_192504_assignmen">fe7949a94f501300ead1ff6f9310c7fe</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="assignment">fe7949a94f501300ead1ff6f9310c7fe</sys_scope>
+        <sys_update_name>sys_app_application_d7db092d4f501300ead1ff6f9310c729</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-15 06:03:02</sys_updated_on>
+        <title>Employee</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>
